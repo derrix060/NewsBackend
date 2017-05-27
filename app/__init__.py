@@ -8,7 +8,7 @@ import json
 app = Flask(__name__)
 
 languages = ['pt', 'en', 'zh']
-categories = ['sports', 'economy', 'politics', 'health', 'tech', 'study']
+categories = ['sports', 'economy', 'health', 'tech', 'study']
 
 
 f = open(abspath('./app/sources.json'), 'r')
