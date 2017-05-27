@@ -8,6 +8,36 @@
     "category": "economy", 
     "language": "pt", 
     "link": "http://www.valor.com.br/"
+  }, 
+  {
+    "category": "health", 
+    "language": "pt", 
+    "link": "https://estilo.uol.com.br/vida-saudavel/"
+  }, 
+  {
+    "category": "tech", 
+    "language": "pt", 
+    "link": "http://computerworld.com.br/"
+  }, 
+  {
+    "category": "sports", 
+    "language": "en", 
+    "link": "http://www.skysports.com/"
+  }, 
+  {
+    "category": "economy", 
+    "language": "en", 
+    "link": "http://www.businessinsider.com/"
+  }, 
+  {
+    "category": "health", 
+    "language": "en", 
+    "link": "http://www.thehealthjournals.com/"
+  }, 
+  {
+    "category": "tech", 
+    "language": "en", 
+    "link": "http://www.technewsworld.com/"
   }
 ]
 }

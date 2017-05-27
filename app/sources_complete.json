@@ -2,17 +2,12 @@
   {
     "category": "sports", 
     "language": "pt", 
-    "link": "https://esporte.uol.com.br/"
+    "link": "http://sportv.globo.com/site/"
   }, 
   {
     "category": "economy", 
     "language": "pt", 
-    "link": "https://economia.uol.com.br/"
-  }, 
-  {
-    "category": "politics", 
-    "language": "pt", 
-    "link": "https://noticias.uol.com.br/politica/"
+    "link": "http://www.valor.com.br/"
   }, 
   {
     "category": "health", 
@@ -22,57 +17,27 @@
   {
     "category": "tech", 
     "language": "pt", 
-    "link": "https://tecnologia.uol.com.br/"
+    "link": "http://computerworld.com.br/"
   }, 
   {
     "category": "sports", 
     "language": "en", 
-    "link": "http://edition.cnn.com/sport"
+    "link": "http://www.skysports.com/"
   }, 
   {
     "category": "economy", 
     "language": "en", 
-    "link": "http://money.cnn.com"
-  }, 
-  {
-    "category": "politics", 
-    "language": "en", 
-    "link": "http://edition.cnn.com/politics"
+    "link": "http://www.businessinsider.com/"
   }, 
   {
     "category": "health", 
     "language": "en", 
-    "link": "http://edition.cnn.com/health"
+    "link": "http://www.thehealthjournals.com/"
   }, 
   {
     "category": "tech", 
     "language": "en", 
-    "link": "http://money.cnn.com/technology/"
-  }, 
-  {
-    "category": "sports", 
-    "language": "zh", 
-    "link": "http://sports.sina.com.cn/"
-  }, 
-  {
-    "category": "economy", 
-    "language": "zh", 
-    "link": "http://finance.sina.com.cn/"
-  }, 
-  {
-    "category": "politics", 
-    "language": "zh", 
-    "link": "http://gov.sina.com.cn/"
-  }, 
-  {
-    "category": "health", 
-    "language": "zh", 
-    "link": "http://health.sina.com.cn"
-  }, 
-  {
-    "category": "tech", 
-    "language": "zh", 
-    "link": "http://tech.sina.com.cn/"
+    "link": "http://www.technewsworld.com/"
   }
 ]
 }
