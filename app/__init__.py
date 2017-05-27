@@ -9,7 +9,7 @@ import time
 app = Flask(__name__)
 
 languages = ['pt', 'en']
-categories = ['sports', 'economy', 'health', 'tech', 'study']
+categories = ['sports', 'economy', 'health', 'tech']
 
 
 f = open(abspath('./app/sources.json'), 'r')
@@ -22,28 +22,23 @@ for src in sources['sources']:
                                                               src['category'],
                                                               src['link'])
 
-while True:
-    time.sleep(600)
-    for src in sources['sources']:
-        srcs[src['language'] + '_' + src['category']].refreshArticles()
-
 
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
 
 
-@app.route('/api/languages')
+@app.route('/api/news/languages')
 def get_languages():
     return jsonify(languages=languages)
 
 
-@app.route('/api/categories')
+@app.route('/api/news/categories')
 def get_categories():
     return jsonify(categories=categories)
 
 
-@app.route('/api/sources_generate')
+@app.route('/api/news/sources_generate')
 def generate_json():
     for lang in languages:
         for cat in categories:
@@ -51,6 +46,13 @@ def generate_json():
             f.close()
 
 
-@app.route('/api/<language>/<category>')
+@app.route('/api/news/<language>/<category>')
 def top_news(language, category):
     return srcs[language + "_" + category].getArticles()
+
+
+@app.route('/api/news/update_news')
+def update_news():
+    for src in sources['sources']:
+        srcs[src['language'] + '_' + src['category']].refreshArticles()
+    return 'Banco de dados atualizados!'
