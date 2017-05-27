@@ -17,7 +17,7 @@
   {
     "category": "tech", 
     "language": "pt", 
-    "link": "http://computerworld.com.br/"
+    "link": "http://revistagalileu.globo.com/"
   }, 
   {
     "category": "sports", 
@@ -38,6 +38,26 @@
     "category": "tech", 
     "language": "en", 
     "link": "http://www.technewsworld.com/"
+  }, 
+  {
+    "category": "sports", 
+    "language": "zh", 
+    "link": "http://sports.sina.com.cn/"
+  }, 
+  {
+    "category": "economy", 
+    "language": "zh", 
+    "link": "http://finance.sina.com.cn/"
+  }, 
+  {
+    "category": "health", 
+    "language": "zh", 
+    "link": "http://health.sina.com.cn"
+  }, 
+  {
+    "category": "tech", 
+    "language": "zh", 
+    "link": "http://tech.sina.com.cn/"
   }
 ]
 }
