@@ -27,17 +27,17 @@ def hello_world():
     return 'Hello, World!'
 
 
-@app.route('/languages')
+@app.route('/api/languages')
 def get_languages():
     return jsonify(languages=languages)
 
 
-@app.route('/categories')
+@app.route('/api/categories')
 def get_categories():
     return jsonify(categories=categories)
 
 
-@app.route('/sources_generate')
+@app.route('/api/sources_generate')
 def generate_json():
     srcs_json = []
     for lang in languages:
@@ -50,6 +50,6 @@ def generate_json():
     return jsonify(srcs_json)
 
 
-@app.route('/api/<language>/<category>/top_news')
+@app.route('/api/<language>/<category>')
 def top_news(language, category):
     return jsonify(srcs[language + "_" + category].getArticles())

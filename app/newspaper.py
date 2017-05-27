@@ -17,9 +17,11 @@ class Newspaper():
         if amount > len(self.articles):
             amount = len(self.articles)
         i = 0
+        j = -1
         while i < amount:
+            j += 1
             try:
-                article_temp = self.articles[i]
+                article_temp = self.articles[j]
                 print(article_temp.url)
                 article_temp.download()
                 article_temp.parse()
