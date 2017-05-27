@@ -3,6 +3,7 @@ from app.news import News
 from app.newspaper import Newspaper
 from os.path import abspath
 import json
+import time
 
 
 app = Flask(__name__)
@@ -20,6 +21,11 @@ for src in sources['sources']:
     srcs[src['language'] + '_' + src['category']] = Newspaper(src['language'],
                                                               src['category'],
                                                               src['link'])
+
+while True:
+    time.sleep(600)
+    for src in sources['sources']:
+        srcs[src['language'] + '_' + src['category']].refreshArticles()
 
 
 @app.route('/')
@@ -47,4 +53,4 @@ def generate_json():
 
 @app.route('/api/<language>/<category>')
 def top_news(language, category):
-    return jsonify(srcs[language + "_" + category].getArticles())
+    return srcs[language + "_" + category].getArticles()

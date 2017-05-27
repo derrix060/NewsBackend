@@ -1,18 +1,35 @@
 import newspaper
+from flask import jsonify
 
 
 class Newspaper():
 
     def __init__(self, language, category, link):
         print('link: ' + str(link))
-        self.news = newspaper.build(link, language=language,
+        self.link = link
+        self.language = language
+        self.category = category
+        self.path = './app/news/' + self.language + '_' + self.category + '.json'
+        # Download newest news
+        self.refreshArticles()
+
+    def refreshArticles(self):
+        self.news = newspaper.build(self.link, language=self.language,
                                     memoize_articles=False,
                                     fetch_images=False)
         self.articles = self.news.articles
-        self.language = language
-        self.category = category
+        articles = jsonify(self.downloadArticles())
+        f = open(self.path, 'w+')
+        f.write(articles)
+        f.close()
 
-    def getArticles(self, amount=10):
+    def getArticles(self):
+        f = open(self.path, 'r')
+        rtn = f.read()
+        f.close()
+        return rtn
+
+    def downloadArticles(self, amount=10):
         rtn = []
         if amount > len(self.articles):
             amount = len(self.articles)
