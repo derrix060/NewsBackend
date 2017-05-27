@@ -30,6 +30,7 @@ class Newspaper():
                     article = {}
                     article['title'] = article_temp.title
                     article['text'] = article_temp.text
+                    article['publish_date'] = article_temp.publish_date
                     rtn.append(article)
                     i += 1
             except Exception as e:
