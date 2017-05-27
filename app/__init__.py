@@ -18,8 +18,8 @@ srcs = {}
 for src in sources['sources']:
     print(src)
     srcs[src['language'] + '_' + src['category']] = Newspaper(src['language'],
-                                                        src['category'],
-                                                        src['link'])
+                                                              src['category'],
+                                                              src['link'])
 
 
 @app.route('/')
@@ -39,15 +39,10 @@ def get_categories():
 
 @app.route('/api/sources_generate')
 def generate_json():
-    srcs_json = []
     for lang in languages:
         for cat in categories:
-            s = {}
-            s['link'] = ''
-            s['language'] = lang
-            s['category'] = cat
-            srcs_json.append(s)
-    return jsonify(srcs_json)
+            f = open('./app/news/' + lang + '_' + cat + '.json', 'w+')
+            f.close()
 
 
 @app.route('/api/<language>/<category>')
