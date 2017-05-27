@@ -7,7 +7,7 @@ import json
 
 app = Flask(__name__)
 
-languages = ['pt', 'en', 'zh']
+languages = ['pt', 'en']
 categories = ['sports', 'economy', 'health', 'tech', 'study']
 
 
