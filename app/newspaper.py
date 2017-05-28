@@ -15,8 +15,7 @@ class Newspaper():
 
     def refreshArticles(self):
         self.news = newspaper.build(self.link, language=self.language,
-                                    memoize_articles=False,
-                                    fetch_images=False)
+                                    memoize_articles=False)
         self.articles = self.news.articles
         articles = self.downloadArticles(amount=10)
         articles = json.dumps(articles)
@@ -43,11 +42,18 @@ class Newspaper():
                 print(article_temp.url)
                 article_temp.download()
                 article_temp.parse()
+                article_temp.nlp()
 
                 if len(article_temp.text) > 750:
                     article = {}
                     article['title'] = article_temp.title
                     article['text'] = article_temp.text
+                    article['top_image'] = article_temp.top_image
+                    article['authors'] = article_temp.authors
+                    article['keywords'] = article_temp.keywords
+                    article['source'] = self.news.brand
+                    article['source_description'] = self.news.description
+                    article['link'] = article_temp.link
                     article['publish_date'] = str(article_temp.publish_date)
                     rtn.append(article)
                     i += 1

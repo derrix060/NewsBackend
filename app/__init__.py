@@ -30,12 +30,12 @@ def hello_world():
 
 @app.route('/api/news/languages')
 def get_languages():
-    return jsonify(languages=languages)
+    return jsonify(languages)
 
 
 @app.route('/api/news/categories')
 def get_categories():
-    return jsonify(categories=categories)
+    return jsonify(categories)
 
 
 @app.route('/api/news/sources_generate')
