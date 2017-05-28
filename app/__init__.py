@@ -8,7 +8,7 @@ import time
 app = Flask(__name__)
 
 languages = ['pt', 'en']
-categories = ['sports', 'economy', 'health', 'tech']
+categories = ['last_news','sports', 'economy', 'health', 'tech']
 
 
 f = open(abspath('./app/sources.json'), 'r')
@@ -19,7 +19,8 @@ for src in sources['sources']:
     print(src)
     srcs[src['language'] + '_' + src['category']] = Newspaper(src['language'],
                                                               src['category'],
-                                                              src['link'])
+                                                              src['link'],
+                                                              src['keyword'])
 
 
 @app.route('/')
