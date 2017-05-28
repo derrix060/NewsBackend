@@ -34,7 +34,12 @@ def get_languages():
 
 @app.route('/api/news/categories')
 def get_categories():
-    return jsonify(categories)
+    cat = []
+    for cate in categories:
+        cat_d = {}
+        cat_d['category'] = cate
+        cat.append(cat_d)
+    return jsonify(cat)
 
 
 @app.route('/api/news/sources_generate')
