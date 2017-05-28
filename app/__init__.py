@@ -51,8 +51,14 @@ def top_news(language, category):
     return srcs[language + "_" + category].getArticles()
 
 
-@app.route('/api/news/update_news')
-def update_news():
-    for src in sources['sources']:
-        srcs[src['language'] + '_' + src['category']].refreshArticles()
-    return 'Banco de dados atualizados!'
+@app.route('/api/news/update_news/<passwd>')
+def update_news(passwd):
+    if passwd == 'updateNews':
+        while True:
+            print('sleeping for 600 secs...')
+            time.sleep(600)
+            for src in sources['sources']:
+                srcs[src['language'] + '_' + src['category']].refreshArticles()
+            print('Articles up-to-date!')
+    else:
+        return('Sorry, wrong password!')
