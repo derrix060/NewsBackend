@@ -18,7 +18,7 @@ class Newspaper():
                                     memoize_articles=False,
                                     fetch_images=False)
         self.articles = self.news.articles
-        articles = self.downloadArticles(amount=2)
+        articles = self.downloadArticles(amount=10)
         articles = json.dumps(articles)
         f = open(self.path, 'w+')
         f.write(str(articles))
