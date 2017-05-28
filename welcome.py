@@ -19,11 +19,8 @@ port = os.getenv('PORT', '5000')
 
 
 def upServer():
-    if "CI" in os.environ and os.environ["CI"] == "true":
-        print("I'm CI")
-        app.run(host='0.0.0.0', port=int(port), debug=True)
-    else:
-        app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(port), debug=True)
+    #app.run(debug=True)
 
 
 if __name__ == "__main__":
