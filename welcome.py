@@ -19,8 +19,8 @@ port = os.getenv('PORT', '5000')
 
 
 def upServer():
-    app.run(host='0.0.0.0', port=int(port), debug=True)
-    #app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(port), debug=True, threaded=True)
+    # app.run(debug=True, threaded=True)
 
 
 if __name__ == "__main__":
