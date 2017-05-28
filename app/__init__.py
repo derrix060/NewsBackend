@@ -1,5 +1,4 @@
 from flask import Flask, jsonify
-from app.news import News
 from app.newspaper import Newspaper
 from os.path import abspath
 import json
