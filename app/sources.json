@@ -1,43 +1,63 @@
 { "sources": [
   {
+    "category": "last_news", 
+    "language": "pt", 
+    "link": "http://noticias.r7.com/brasil/noticias",
+    "keyword": "/brasil/"
+  },
+  {
     "category": "sports", 
     "language": "pt", 
-    "link": "http://sportv.globo.com/site/"
+    "link": "http://sportv.globo.com/",
+    "keyword": "sportv"
   }, 
   {
     "category": "economy", 
     "language": "pt", 
-    "link": "http://www.valor.com.br/"
+    "link": "http://www.valor.com.br/",
+    "keyword": "valor.com.br"
   }, 
   {
     "category": "health", 
     "language": "pt", 
-    "link": "https://estilo.uol.com.br/vida-saudavel/"
+    "link": "http://g1.globo.com/bemestar/",
+    "keyword": "bemestar"
   }, 
   {
     "category": "tech", 
     "language": "pt", 
-    "link": "http://computerworld.com.br/"
+    "link": "http://computerworld.com.br/",
+    "keyword": "computerworld.com.br"
   }, 
+  {
+    "category": "last_news", 
+    "language": "en", 
+    "link": "http://edition.cnn.com/",
+    "keyword": "/2017/05"
+  },
   {
     "category": "sports", 
     "language": "en", 
-    "link": "http://www.skysports.com/"
+    "link": "http://www.foxnews.com/sports.html",
+    "keyword": "sports"
   }, 
   {
     "category": "economy", 
     "language": "en", 
-    "link": "http://www.businessinsider.com/"
+    "link": "https://www.theguardian.com/business/",
+    "keyword": "business"
   }, 
   {
     "category": "health", 
     "language": "en", 
-    "link": "http://www.thehealthjournals.com/"
+    "link": "http://edition.cnn.com/health",
+    "keyword": "health"
   }, 
   {
     "category": "tech", 
     "language": "en", 
-    "link": "http://www.technewsworld.com/"
+    "link": "https://www.theguardian.com/technology",
+    "keyword": "technology"
   }
 ]
 }
