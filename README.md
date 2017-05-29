@@ -18,7 +18,7 @@ You can see our available categories on this endpoint: https://dsnewsbackend.myb
 ```json
 [
     {
-        "category": "top_news"
+        "category": "last_news"
     },
     {
         "category": "sports"
